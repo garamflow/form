@@ -11,11 +11,11 @@ const Button = ({ text, className }: FormButtonProps) => {
 
 	return (
 		<button
-			className={`bg-slate-700 w-80 px-4 py-2 rounded-2xl ${className} `}
+			className={`bg-slate-400 w-80 px-4 py-2 rounded-2xl transition disabled:bg-neutral-400  disabled:text-neutral-300 disabled:cursor-not-allowed ${className} `}
 			disabled={pending}
 		>
 			<span className={`${pending ? "loading loading-spinner" : ""}`}></span>
-			{pending ? "로딩중" : text}
+			{pending ? "Loading..." : text}
 		</button>
 	);
 };
