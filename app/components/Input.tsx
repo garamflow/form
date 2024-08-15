@@ -11,7 +11,7 @@ const FormInput = ({ name, errors = [], ...extraProps }: FormInputProps & InputH
 			<input
 				{...extraProps}
 				name={name}
-				className='w-full max-w-xs ring-2 focus:ring-4 transition rounded-3xl p-2 placeholder:px-6'
+				className='w-full max-w-xs ring-2 focus:ring-4 transition rounded-3xl px-6 py-2 text-black '
 			/>
 			<label className='text-red-500'>{errors[0]}</label>
 		</div>
