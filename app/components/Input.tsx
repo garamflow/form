@@ -13,7 +13,7 @@ const FormInput = ({ name, errors = [], ...extraProps }: FormInputProps & InputH
 				name={name}
 				className='w-full max-w-xs ring-2 focus:ring-4 transition rounded-3xl px-6 py-2 text-black '
 			/>
-			<label className='text-red-500'>{errors[0]}</label>
+			{errors.length > 0 && <label className='text-red-500'>{errors[0]}</label>}
 		</div>
 	);
 };
