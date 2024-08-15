@@ -30,9 +30,9 @@ export default function Home() {
 					/>
 				</svg>
 			</div>
-			<div className=''>
+			<div>
 				<form
-					action=''
+					action={dispatch}
 					className='flex flex-col justify-center items-center gap-3'
 				>
 					<Input
@@ -40,20 +40,24 @@ export default function Home() {
 						type='email'
 						placeholder='Email'
 						required
+						errors={state?.errors?.fieldErrors.email}
 					/>
 					<Input
 						name='username'
 						type='text'
 						placeholder='Username'
 						required
+						errors={state?.errors?.fieldErrors.username}
 					/>
 					<Input
 						name='password'
 						type='password'
 						placeholder='Password'
 						required
+						errors={state?.errors?.fieldErrors.password}
 					/>
-					<Button />
+					<Button text='Log in' />
+					{state?.success && <div className='bg-green-600 mt-4 w-80 px-4 py-2 text-black rounded-2xl font-bold transition animate-bounce '>Welcome</div>}
 				</form>
 			</div>
 		</div>
